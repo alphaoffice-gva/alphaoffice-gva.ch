@@ -34,7 +34,7 @@ const T = {
     "p3.t":"Accompagnement continu","p3.d":"Nous gérons vos polices et mettons à jour vos couvertures selon l'évolution de votre vie.",
     "cp.eyebrow":"Contactez-nous","cp.title":"Parlons de vos besoins","cp.sub":"Premier entretien gratuit et sans engagement. Réponse sous 48 heures.",
     "cf.title":"Envoyez-nous un message",
-    "f.fn":"Prénom","f.ln":"Nom","f.em":"Adresse email","f.ph":"Téléphone","f.pol":"Numéro de police (optionnel)","f.su":"Sujet","f.ms":"Votre message","f.sb":"Envoyer le message",
+    "f.fn":"Prénom","f.ln":"Nom","f.em":"Adresse email","f.ph":"Téléphone","f.pol":"Numéro de police (optionnel)","f.su":"Sujet","f.ms":"Votre message","f.sb":"Envoyer le message","f.doc":"Documents (optionnel)","f.doc.hint":"PDF, Word, images – max 10 Mo par fichier","f.doc.btn":"Choisir des fichiers","f.doc.drop":"ou glisser-déposer ici",
     "f.o0":"Sélectionner un sujet","f.o1":"Conseils en assurance","f.o2":"Gestion de police","f.o3":"Déclaration de sinistre","f.o4":"Solutions entreprise","f.o5":"Autre",
     "ci.ad":"Adresse","ci.em":"Email","ci.hr":"Horaires","ci.hv":"Lun–Ven : 9h00 – 18h00",
     "ci.title":"Nos coordonnées",
@@ -134,7 +134,7 @@ const T = {
     "p3.t":"Dauerhafte Begleitung","p3.d":"Wir verwalten Ihre Policen langfristig und passen Ihre Deckungen an die Veränderungen Ihres Lebens an.",
     "cp.eyebrow":"Kontaktieren Sie uns","cp.title":"Sprechen wir über Ihre Bedürfnisse","cp.sub":"Kostenloses und unverbindliches Erstgespräch. Antwort innerhalb von 48 Stunden.",
     "cf.title":"Senden Sie uns eine Nachricht",
-    "f.fn":"Vorname","f.ln":"Nachname","f.em":"E-Mail-Adresse","f.ph":"Telefon","f.pol":"Policennummer (optional)","f.su":"Betreff","f.ms":"Ihre Nachricht","f.sb":"Nachricht senden",
+    "f.fn":"Vorname","f.ln":"Nachname","f.em":"E-Mail-Adresse","f.ph":"Telefon","f.pol":"Policennummer (optional)","f.su":"Betreff","f.ms":"Ihre Nachricht","f.sb":"Nachricht senden","f.doc":"Dokumente (optional)","f.doc.hint":"PDF, Word, Bilder – max. 10 MB pro Datei","f.doc.btn":"Dateien auswählen","f.doc.drop":"oder hierher ziehen",
     "f.o0":"Betreff auswählen","f.o1":"Versicherungsberatung","f.o2":"Policenverwaltung","f.o3":"Schadenmeldung","f.o4":"Unternehmenslösungen","f.o5":"Sonstiges",
     "ci.ad":"Adresse","ci.em":"E-Mail","ci.hr":"Öffnungszeiten","ci.hv":"Mo–Fr: 9:00 – 18:00 Uhr",
     "ci.title":"Unsere Kontaktdaten",
@@ -228,7 +228,7 @@ const T = {
     "p3.t":"Ongoing support","p3.d":"We manage your policies and update your coverage as your life evolves.",
     "cp.eyebrow":"Contact us","cp.title":"Let's talk about your needs","cp.sub":"Free initial consultation. Response within 48 hours.",
     "cf.title":"Send us a message",
-    "f.fn":"First name","f.ln":"Last name","f.em":"Email address","f.ph":"Phone","f.pol":"Policy number (optional)","f.su":"Subject","f.ms":"Your message","f.sb":"Send message",
+    "f.fn":"First name","f.ln":"Last name","f.em":"Email address","f.ph":"Phone","f.pol":"Policy number (optional)","f.su":"Subject","f.ms":"Your message","f.sb":"Send message","f.doc":"Documents (optional)","f.doc.hint":"PDF, Word, images – max 10 MB per file","f.doc.btn":"Choose files","f.doc.drop":"or drag and drop here",
     "f.o0":"Select a subject","f.o1":"Insurance advice","f.o2":"Policy management","f.o3":"Claims declaration","f.o4":"Business solutions","f.o5":"Other",
     "ci.ad":"Address","ci.em":"Email","ci.hr":"Opening hours","ci.hv":"Mon–Fri: 9:00 am – 6:00 pm","ci.title":"Our contact details",
     "ft.desc":"Independent insurance brokerage based in Geneva, operating throughout Switzerland.",
@@ -310,7 +310,7 @@ const T = {
     "cta.title":"Pronti a ottimizzare le vostre assicurazioni?","cta.desc":"Contattateci per un primo colloquio gratuito e senza impegno.","cta.btn":"Fissa appuntamento",
     "cp.eyebrow":"Contattateci","cp.title":"Parliamo delle vostre esigenze","cp.sub":"Primo colloquio gratuito. Risposta entro 48 ore.",
     "cf.title":"Inviateci un messaggio",
-    "f.fn":"Nome","f.ln":"Cognome","f.em":"Indirizzo email","f.ph":"Telefono","f.pol":"Numero di polizza (opzionale)","f.su":"Oggetto","f.ms":"Il vostro messaggio","f.sb":"Invia messaggio",
+    "f.fn":"Nome","f.ln":"Cognome","f.em":"Indirizzo email","f.ph":"Telefono","f.pol":"Numero di polizza (opzionale)","f.su":"Oggetto","f.ms":"Il vostro messaggio","f.sb":"Invia messaggio","f.doc":"Documenti (opzionale)","f.doc.hint":"PDF, Word, immagini – max 10 MB per file","f.doc.btn":"Scegli file","f.doc.drop":"o trascina qui",
     "f.o0":"Seleziona oggetto","f.o1":"Consulenza assicurativa","f.o2":"Gestione polizza","f.o3":"Dichiarazione sinistro","f.o4":"Soluzioni aziendali","f.o5":"Altro",
     "ci.ad":"Indirizzo","ci.em":"Email","ci.hr":"Orari","ci.hv":"Lun–Ven: 9:00 – 18:00","ci.title":"I nostri contatti",
     "ft.desc":"Studio di brokeraggio assicurativo indipendente con sede a Ginevra.","ft.pages":"Pagine","ft.svc":"Servizi","ft.cnt":"Contatto",
@@ -388,7 +388,7 @@ const T = {
     "p3.t":"Mbështetje e vazhdueshme","p3.d":"Menaxhojmë polica tuaja dhe përditësojmë mbulimin tuaj sipas evolucionit të jetës suaj.",
     "cp.eyebrow":"Na kontaktoni","cp.title":"Le të flasim për nevojat tuaja","cp.sub":"Konsultim i parë falas. Përgjigje brenda 48 orëve.",
     "cf.title":"Na dërgoni një mesazh",
-    "f.fn":"Emri","f.ln":"Mbiemri","f.em":"Adresa email","f.ph":"Telefon","f.pol":"Numri i policës (opsional)","f.su":"Subjekti","f.ms":"Mesazhi juaj","f.sb":"Dërgo mesazh",
+    "f.fn":"Emri","f.ln":"Mbiemri","f.em":"Adresa email","f.ph":"Telefon","f.pol":"Numri i policës (opsional)","f.su":"Subjekti","f.ms":"Mesazhi juaj","f.sb":"Dërgo mesazh","f.doc":"Dokumente (opsionale)","f.doc.hint":"PDF, Word, imazhe – maks 10 MB","f.doc.btn":"Zgjidh skedarë","f.doc.drop":"ose tërhiq këtu",
     "f.o0":"Zgjidh subjektin","f.o1":"Këshillim sigurimi","f.o2":"Menaxhim police","f.o3":"Deklarim dëmi","f.o4":"Zgjidhje biznesi","f.o5":"Tjetër",
     "ci.ad":"Adresa","ci.em":"Email","ci.hr":"Orari","ci.hv":"Hën–Pre: 9:00 – 18:00","ci.title":"Kontaktet tona",
     "ft.desc":"Studio e pavarur brokerimi sigurimesh me seli në Gjenevë, që operon në të gjithë Zvicrën.","ft.pages":"Faqe","ft.svc":"Shërbime","ft.cnt":"Kontakt",
@@ -485,7 +485,7 @@ const T = {
     "p3.t":"Trajna podrška","p3.d":"Upravljamo vašim policama i ažuriramo pokrivenost prema promjenama u vašem životu.",
     "cp.eyebrow":"Kontaktirajte nas","cp.title":"Razgovarajmo o vašim potrebama","cp.sub":"Besplatni prvi razgovor. Odgovor unutar 48 sati.",
     "cf.title":"Pošaljite nam poruku",
-    "f.fn":"Ime","f.ln":"Prezime","f.em":"Email adresa","f.ph":"Telefon","f.pol":"Broj police (neobavezno)","f.su":"Predmet","f.ms":"Vaša poruka","f.sb":"Pošalji poruku",
+    "f.fn":"Ime","f.ln":"Prezime","f.em":"Email adresa","f.ph":"Telefon","f.pol":"Broj police (neobavezno)","f.su":"Predmet","f.ms":"Vaša poruka","f.sb":"Pošalji poruku","f.doc":"Dokumenti (neobavezno)","f.doc.hint":"PDF, Word, slike – maks 10 MB po datoteci","f.doc.btn":"Odaberi datoteke","f.doc.drop":"ili prevuci ovdje",
     "f.o0":"Odaberi predmet","f.o1":"Savjetovanje o osiguranju","f.o2":"Upravljanje policom","f.o3":"Prijava štete","f.o4":"Poslovne solucije","f.o5":"Ostalo",
     "ci.ad":"Adresa","ci.em":"Email","ci.hr":"Radno vrijeme","ci.hv":"Pon–Pet: 9:00 – 18:00","ci.title":"Naši kontakti",
     "ft.desc":"Neovisni broker osiguranja sa sjedištem u Ženevi, koji posluje diljem Švicarske.","ft.pages":"Stranice","ft.svc":"Usluge","ft.cnt":"Kontakt",
@@ -617,6 +617,59 @@ function initNav() {
   });
 }
 
+// ─── File upload ───
+function initFileUpload() {
+  const zone = document.getElementById('dropZone');
+  const input = document.getElementById('fileInput');
+  const list = document.getElementById('fileList');
+  if (!zone || !input || !list) return;
+
+  let files = [];
+
+  function renderFiles() {
+    list.innerHTML = '';
+    files.forEach((f, i) => {
+      const item = document.createElement('div');
+      item.className = 'file-item';
+      item.innerHTML = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        <span>${f.name}</span>
+        <button class="file-remove" type="button" data-i="${i}" aria-label="Supprimer">×</button>`;
+      list.appendChild(item);
+    });
+    list.querySelectorAll('.file-remove').forEach(btn => {
+      btn.addEventListener('click', e => {
+        files.splice(+e.target.dataset.i, 1);
+        updateInput();
+        renderFiles();
+      });
+    });
+  }
+
+  function updateInput() {
+    const dt = new DataTransfer();
+    files.forEach(f => dt.items.add(f));
+    input.files = dt.files;
+  }
+
+  function addFiles(newFiles) {
+    Array.from(newFiles).forEach(f => {
+      if (!files.find(x => x.name === f.name && x.size === f.size)) files.push(f);
+    });
+    updateInput();
+    renderFiles();
+  }
+
+  input.addEventListener('change', () => addFiles(input.files));
+
+  zone.addEventListener('dragover', e => { e.preventDefault(); zone.classList.add('drag-over'); });
+  zone.addEventListener('dragleave', () => zone.classList.remove('drag-over'));
+  zone.addEventListener('drop', e => {
+    e.preventDefault();
+    zone.classList.remove('drag-over');
+    addFiles(e.dataTransfer.files);
+  });
+}
+
 // ─── Scroll reveal ───
 function initReveal() {
   const obs = new IntersectionObserver((entries) => {
@@ -629,6 +682,7 @@ function initReveal() {
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
   initReveal();
+  initFileUpload();
   applyLang(lang);
 
   // Lang picker toggle
