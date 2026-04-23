@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>3ème pilier en Suisse | Alpha Office – Courtier en assurances Genève</title>
+  <meta name="description" content="Tout comprendre sur le 3ème pilier suisse : pilier 3a, pilier 3b, avantages fiscaux, montants déductibles et conseils personnalisés par Alpha Office Sàrl à Genève."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://alphaoffice-gva.ch/troisieme-pilier.html"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* ── Pillar system diagram ── */
+    .pillars-diagram {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+    .pillar-col {
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .pillar-col.p1 { background: var(--light); }
+    .pillar-col.p2 { background: var(--light); }
+    .pillar-col.p3 { background: var(--crimson); color: white; }
+    .pillar-col.p3 p { color: rgba(255,255,255,0.8); }
+    .pillar-num {
+      font-size: 3rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .p1 .pillar-num, .p2 .pillar-num { color: rgba(0,0,0,0.12); }
+    .p3 .pillar-num { color: rgba(255,255,255,0.2); }
+    .pillar-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+    }
+    .p1 .pillar-tag, .p2 .pillar-tag { background: rgba(0,0,0,0.07); color: var(--medium); }
+    .p3 .pillar-tag { background: rgba(255,255,255,0.2); color: white; }
+    .pillar-col h3 { font-size: 1.05rem; margin-bottom: 0.6rem; }
+    .p3 .pillar-col h3 { color: white; }
+    .pillar-col p { font-size: 0.88rem; line-height: 1.55; }
+    .pillar-highlight {
+      position: absolute; top: 0; right: 0;
+      background: var(--gold); color: var(--dark);
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 4px 12px;
+      border-bottom-left-radius: 10px;
+    }
+
+    /* ── 3a vs 3b comparison ── */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    .compare-card {
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      border: 2px solid transparent;
+    }
+    .compare-card.card-3a {
+      background: linear-gradient(135deg, rgba(155,28,46,0.05) 0%, rgba(155,28,46,0.02) 100%);
+      border-color: rgba(155,28,46,0.15);
+    }
+    .compare-card.card-3b {
+      background: linear-gradient(135deg, rgba(196,168,106,0.08) 0%, rgba(196,168,106,0.03) 100%);
+      border-color: rgba(196,168,106,0.25);
+    }
+    .compare-card h3 { font-size: 1.5rem; margin-bottom: 0.4rem; }
+    .card-3a h3 { color: var(--crimson); }
+    .card-3b h3 { color: #8B6914; }
+    .compare-card .subtitle { font-size: 0.85rem; color: var(--gray); margin-bottom: 1.5rem; }
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .feature-list li {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      font-size: 0.92rem; color: var(--medium); line-height: 1.5;
+    }
+    .feature-list li::before {
+      content: '✓';
+      font-weight: 700; font-size: 0.8rem; flex-shrink: 0;
+      width: 20px; height: 20px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 1px;
+    }
+    .card-3a .feature-list li::before { background: rgba(155,28,46,0.1); color: var(--crimson); }
+    .card-3b .feature-list li::before { background: rgba(196,168,106,0.2); color: #8B6914; }
+    .compare-card .limit-badge {
+      margin-top: 1.5rem; padding: 1rem 1.2rem;
+      border-radius: 12px; font-size: 0.85rem;
+    }
+    .card-3a .limit-badge { background: rgba(155,28,46,0.07); }
+    .card-3b .limit-badge { background: rgba(196,168,106,0.12); }
+    .limit-badge strong { display: block; font-size: 1.1rem; margin-bottom: 0.2rem; }
+
+    /* ── Tax savings visual ── */
+    .tax-banner {
+      background: linear-gradient(135deg, var(--crimson) 0%, var(--crimson-dark) 100%);
+      border-radius: 24px;
+      padding: 3rem;
+      color: white;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      margin: 3rem 0;
+      text-align: center;
+    }
+    .tax-stat strong {
+      display: block;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--gold);
+    }
+    .tax-stat span { font-size: 0.88rem; color: rgba(255,255,255,0.75); line-height: 1.4; }
+
+    /* ── Who is it for ── */
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin: 2.5rem 0;
+    }
+    .profile-card {
+      background: var(--light);
+      border-radius: 18px;
+      padding: 2rem 1.5rem;
+    }
+    .profile-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .profile-card h4 { font-size: 1rem; margin-bottom: 0.6rem; color: var(--dark); }
+    .profile-card p { font-size: 0.88rem; line-height: 1.55; }
+
+    /* ── FAQ ── */
+    .faq-list { display: flex; flex-direction: column; gap: 1rem; margin: 2.5rem 0; }
+    .faq-item {
+      background: var(--light);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.25rem 1.5rem;
+      text-align: left;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--dark);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font);
+    }
+    .faq-q::after {
+      content: '+';
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--crimson);
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+    .faq-item.open .faq-q::after { transform: rotate(45deg); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0 1.5rem;
+      font-size: 0.92rem;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+    .faq-item.open .faq-a { max-height: 300px; padding: 0 1.5rem 1.25rem; }
+
+    /* ── Section head (left-aligned) ── */
+    .section-head { margin-bottom: 2.5rem; }
+    .section-head .eyebrow { margin-bottom: 0.75rem; }
+    .section-head h2 { margin-bottom: 0.75rem; }
+    .section-head p { max-width: 680px; }
+
+    /* ── Withdrawal grid ── */
+    .withdraw-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .withdraw-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .withdraw-item .wi-icon { font-size: 1.5rem; }
+    .withdraw-item strong { font-size: 0.9rem; color: var(--dark); }
+    .withdraw-item p { font-size: 0.82rem; margin: 0; }
+
+    /* ── Info banner ── */
+    .info-banner {
+      background: var(--light);
+      border-radius: 16px;
+      padding: 1.5rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+    .info-banner svg { flex-shrink: 0; }
+    .info-banner p { margin: 0; font-size: 0.92rem; }
+
+    /* ── Withdrawal box ── */
+    .withdraw-box {
+      background: var(--light);
+      border-radius: 20px;
+      padding: 2.5rem;
+      margin-top: 2rem;
+    }
+    .withdraw-box h3 { margin-bottom: 1.5rem; font-size: 1.15rem; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .pillars-diagram { grid-template-columns: 1fr; }
+      .compare-grid { grid-template-columns: 1fr; }
+      .tax-banner { grid-template-columns: 1fr; gap: 1.5rem; padding: 2rem 1.5rem; }
+      .profile-grid { grid-template-columns: 1fr 1fr; }
+      .withdraw-grid { grid-template-columns: 1fr 1fr; }
+      .info-banner { flex-direction: column; align-items: flex-start; gap: 0.75rem; padding: 1.25rem; }
+      .withdraw-box { padding: 1.75rem 1.25rem; }
+    }
+    @media (max-width: 480px) {
+      .profile-grid { grid-template-columns: 1fr; }
+      .withdraw-grid { grid-template-columns: 1fr; }
+      .compare-card { padding: 1.75rem 1.25rem; }
+      .tax-banner { padding: 1.75rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo logo-alpha-office">
+    <img src="logo_crop.png" alt="Alpha Office" class="logo-icon"/>
+    <span class="logo-text">Alpha Office</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-page="index.html" data-i18n="nav.home">Accueil</a></li>
+    <li><a href="services.html" data-page="services.html" data-i18n="nav.services">Services</a></li>
+    <li><a href="troisieme-pilier.html" data-page="troisieme-pilier.html" data-i18n="nav.tp">3ème pilier</a></li>
+    <li><a href="contact.html" data-page="contact.html" data-i18n="nav.contact">Contact</a></li>
+    <li><a href="contact.html" class="nav-cta" data-i18n="nav.cta">Prendre rendez-vous</a></li>
+  </ul>
+  <div class="lang-picker">
+    <button class="lang-btn" aria-haspopup="listbox" aria-expanded="false">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <span class="lang-current">FR</span>
+      <svg class="lang-chevron" width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0l5 6 5-6z"/></svg>
+    </button>
+    <ul class="lang-dropdown" role="listbox">
+      <li data-lang="fr">Français</li>
+      <li data-lang="de">Deutsch</li>
+      <li data-lang="en">English</li>
+      <li data-lang="it">Italiano</li>
+      <li data-lang="sq">Shqip</li>
+      <li data-lang="hr">Bosanski</li>
+    </ul>
+  </div>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<header class="page-hero">
+  <span class="eyebrow anim-1" data-i18n="tp.eyebrow">Prévoyance privée</span>
+  <h1 class="anim-2" data-i18n="tp.title">Le 3ème pilier expliqué</h1>
+  <p class="anim-3" data-i18n="tp.sub">Comprenez comment fonctionne la prévoyance suisse et pourquoi le 3ème pilier est essentiel pour votre avenir financier.</p>
+</header>
+
+<!-- SECTION 1 : Les 3 piliers -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="tp.s1.eyebrow">Le système suisse</span>
+      <h2 data-i18n="tp.s1.title">Les 3 piliers de la prévoyance</h2>
+      <p data-i18n="tp.s1.desc">La Suisse dispose d'un système de prévoyance retraite unique, structuré en trois piliers complémentaires. Ensemble, ils visent à maintenir votre niveau de vie après la retraite.</p>
+    </div>
+
+    <div class="pillars-diagram reveal">
+      <div class="pillar-col p1">
+        <div class="pillar-num">1</div>
+        <span class="pillar-tag" data-i18n="tp.p1.tag">Obligatoire</span>
+        <h3 data-i18n="tp.p1.title">AVS / AI</h3>
+        <p data-i18n="tp.p1.desc">Assurance vieillesse et survivants. Couvre les besoins vitaux de base. Financée par les cotisations de tous les salariés et employeurs.</p>
+      </div>
+      <div class="pillar-col p2">
+        <div class="pillar-num">2</div>
+        <span class="pillar-tag" data-i18n="tp.p2.tag">Obligatoire</span>
+        <h3 data-i18n="tp.p2.title">LPP / Caisse de pension</h3>
+        <p data-i18n="tp.p2.desc">Prévoyance professionnelle. Obligatoire pour les salariés. Maintient le niveau de vie habituel en complément de l'AVS.</p>
+      </div>
+      <div class="pillar-col p3">
+        <div class="pillar-highlight" data-i18n="tp.p3.badge">Vous êtes ici</div>
+        <div class="pillar-num">3</div>
+        <span class="pillar-tag" data-i18n="tp.p3.tag">Volontaire</span>
+        <h3 style="color:white" data-i18n="tp.p3.title">Prévoyance privée</h3>
+        <p data-i18n="tp.p3.desc">Épargne individuelle et volontaire. Comble l'écart entre votre dernier salaire et vos rentes. Avec des avantages fiscaux significatifs.</p>
+      </div>
+    </div>
+
+    <div class="info-banner reveal">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" fill="#9B1C2E" opacity="0.1"/><path d="M12 8v4m0 4h.01" stroke="#9B1C2E" stroke-width="2" stroke-linecap="round"/></svg>
+      <p data-i18n="tp.info">En Suisse, les deux premiers piliers remplacent généralement <strong>60 à 70 %</strong> de votre dernier salaire. Le 3ème pilier comble ce manque pour maintenir votre qualité de vie.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 : 3a vs 3b -->
+<section class="section" style="background:var(--light)">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="tp.s2.eyebrow">Deux options</span>
+      <h2 data-i18n="tp.s2.title">Pilier 3a ou 3b : quelle différence ?</h2>
+      <p data-i18n="tp.s2.desc">Le troisième pilier se divise en deux formes distinctes, avec des avantages et des contraintes différents.</p>
+    </div>
+
+    <div class="compare-grid reveal">
+      <!-- 3a -->
+      <div class="compare-card card-3a">
+        <h3>Pilier 3a</h3>
+        <p class="subtitle" data-i18n="tp.3a.sub">Prévoyance liée – avec déduction fiscale</p>
+        <ul class="feature-list">
+          <li data-i18n="tp.3a.f1">Déductible à 100 % du revenu imposable</li>
+          <li data-i18n="tp.3a.f2">Intérêts et rendements non imposables</li>
+          <li data-i18n="tp.3a.f3">Disponible : banque ou compagnie d'assurance</li>
+          <li data-i18n="tp.3a.f4">Idéal pour : salariés et indépendants</li>
+          <li data-i18n="tp.3a.f5">Retrait uniquement dans des cas précis</li>
+        </ul>
+        <div class="limit-badge">
+          <strong data-i18n="tp.3a.lim1">CHF 7'258 / an</strong>
+          <span data-i18n="tp.3a.lim1s">pour les salariés (2025)</span>
+          <strong style="margin-top:0.6rem" data-i18n="tp.3a.lim2">CHF 36'288 / an</strong>
+          <span data-i18n="tp.3a.lim2s">pour les indépendants (max 20 % revenu AVS net)</span>
+        </div>
+      </div>
+      <!-- 3b -->
+      <div class="compare-card card-3b">
+        <h3>Pilier 3b</h3>
+        <p class="subtitle" data-i18n="tp.3b.sub">Prévoyance libre – sans restriction de retrait</p>
+        <ul class="feature-list">
+          <li data-i18n="tp.3b.f1">Aucune restriction sur le retrait des fonds</li>
+          <li data-i18n="tp.3b.f2">Pas de limite de cotisation annuelle</li>
+          <li data-i18n="tp.3b.f3">Déduction fiscale partielle selon les cantons</li>
+          <li data-i18n="tp.3b.f4">Assurance-vie mixte, compte épargne libre</li>
+          <li data-i18n="tp.3b.f5">Idéal pour : objectifs à moyen terme</li>
+        </ul>
+        <div class="limit-badge">
+          <strong data-i18n="tp.3b.lim">Aucun plafond légal</strong>
+          <span data-i18n="tp.3b.lims">Flexibilité totale sur les montants et le retrait</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 : Avantages fiscaux -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="tp.s3.eyebrow">Avantages concrets</span>
+      <h2 data-i18n="tp.s3.title">Ce que vous économisez réellement</h2>
+      <p data-i18n="tp.s3.desc">En cotisant au pilier 3a, vous réduisez directement votre revenu imposable. L'économie d'impôt dépend de votre revenu et de votre canton.</p>
+    </div>
+
+    <div class="tax-banner reveal">
+      <div class="tax-stat">
+        <strong>CHF 7'258</strong>
+        <span data-i18n="tp.tax1">Déduction maximale annuelle pour un salarié (2025)</span>
+      </div>
+      <div class="tax-stat">
+        <strong>20–40 %</strong>
+        <span data-i18n="tp.tax2">Économie d'impôt selon votre revenu et votre canton</span>
+      </div>
+      <div class="tax-stat">
+        <strong>CHF 1'450+</strong>
+        <span data-i18n="tp.tax3">Économie fiscale annuelle estimée pour un revenu moyen à Genève</span>
+      </div>
+    </div>
+
+    <div class="withdraw-box reveal">
+      <h3 data-i18n="tp.withdraw.title">Quand peut-on retirer son pilier 3a ?</h3>
+      <div class="withdraw-grid">
+        <div class="withdraw-item">
+          <span class="wi-icon">🏠</span>
+          <strong data-i18n="tp.w1.t">Achat immobilier</strong>
+          <p data-i18n="tp.w1.d">Financement ou remboursement d'une résidence principale en Suisse.</p>
+        </div>
+        <div class="withdraw-item">
+          <span class="wi-icon">✈️</span>
+          <strong data-i18n="tp.w2.t">Départ de Suisse</strong>
+          <p data-i18n="tp.w2.d">Retrait possible en cas d'émigration définitive hors de Suisse.</p>
+        </div>
+        <div class="withdraw-item">
+          <span class="wi-icon">💼</span>
+          <strong data-i18n="tp.w3.t">Indépendant</strong>
+          <p data-i18n="tp.w3.d">Retrait si vous cessez d'être affilié à une caisse de pension (LPP).</p>
+        </div>
+        <div class="withdraw-item">
+          <span class="wi-icon">🎂</span>
+          <strong data-i18n="tp.w4.t">Retraite</strong>
+          <p data-i18n="tp.w4.d">À partir de 60 ans (ou 5 ans avant l'âge légal de la retraite).</p>
+        </div>
+        <div class="withdraw-item">
+          <span class="wi-icon">🛡️</span>
+          <strong data-i18n="tp.w5.t">Invalidité</strong>
+          <p data-i18n="tp.w5.d">En cas d'invalidité totale ou partielle reconnue par l'AI.</p>
+        </div>
+        <div class="withdraw-item">
+          <span class="wi-icon">🤲</span>
+          <strong data-i18n="tp.w6.t">Décès</strong>
+          <p data-i18n="tp.w6.d">Versement aux bénéficiaires désignés ou aux héritiers légaux.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 : Pour qui -->
+<section class="section" style="background:var(--light)">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="tp.s4.eyebrow">Profils</span>
+      <h2 data-i18n="tp.s4.title">À qui s'adresse le 3ème pilier ?</h2>
+    </div>
+    <div class="profile-grid">
+      <div class="profile-card reveal">
+        <div class="profile-icon">👩‍💼</div>
+        <h4 data-i18n="tp.pr1.t">Salariés</h4>
+        <p data-i18n="tp.pr1.d">Vous avez accès au pilier 3a avec la déduction maximale de CHF 7'258. C'est la façon la plus simple d'économiser des impôts tout en préparant votre retraite.</p>
+      </div>
+      <div class="profile-card reveal reveal-d2">
+        <div class="profile-icon">🏗️</div>
+        <h4 data-i18n="tp.pr2.t">Indépendants</h4>
+        <p data-i18n="tp.pr2.d">Sans 2ème pilier obligatoire, le 3ème pilier est votre principal outil de prévoyance. Vous pouvez déduire jusqu'à CHF 36'288 par an — un levier fiscal majeur.</p>
+      </div>
+      <div class="profile-card reveal reveal-d3">
+        <div class="profile-icon">🌍</div>
+        <h4 data-i18n="tp.pr3.t">Expatriés & frontaliers</h4>
+        <p data-i18n="tp.pr3.d">Si vous travaillez en Suisse et êtes affilié à l'AVS, vous pouvez cotiser au 3ème pilier, même si vous résidez à l'étranger. Des règles spécifiques s'appliquent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 : FAQ -->
+<section class="section">
+  <div class="section-inner" style="max-width:800px;margin:0 auto">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="tp.faq.eyebrow">Questions fréquentes</span>
+      <h2 data-i18n="tp.faq.title">Ce que nos clients demandent</h2>
+    </div>
+    <div class="faq-list reveal">
+
+      <div class="faq-item">
+        <button class="faq-q" data-i18n="tp.q1">Quelle est la différence entre un 3a en banque et en assurance ?</button>
+        <div class="faq-a" data-i18n="tp.a1">Un 3a bancaire est un compte d'épargne ou de placement : vous versez librement, sans engagement de durée. Un 3a en assurance combine l'épargne avec une couverture en cas de décès ou d'invalidité — si vous ne pouvez plus cotiser, la compagnie continue à votre place. Alpha Office vous conseille la solution adaptée à votre situation personnelle.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" data-i18n="tp.q2">Puis-je avoir plusieurs piliers 3a ?</button>
+        <div class="faq-a" data-i18n="tp.a2">Oui. Il est possible d'avoir plusieurs comptes ou polices 3a simultanément. C'est même conseillé : lors du retrait, chaque compte est imposé séparément, ce qui permet d'étaler la charge fiscale sur plusieurs années en les retirant à des moments différents.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" data-i18n="tp.q3">Combien d'impôts vais-je économiser ?</button>
+        <div class="faq-a" data-i18n="tp.a3">Cela dépend de votre revenu brut, de votre situation familiale et de votre canton. À titre d'exemple, pour un célibataire avec un revenu de CHF 80'000 à Genève, cotiser CHF 7'258 au 3a peut représenter une économie d'impôt de CHF 1'800 à CHF 2'500 par an. Notre équipe peut calculer votre économie personnalisée.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" data-i18n="tp.q4">À partir de quel âge est-il utile de commencer ?</button>
+        <div class="faq-a" data-i18n="tp.a4">Le plus tôt est le mieux. Commencer à 25 ans plutôt qu'à 40 ans peut représenter une différence de CHF 100'000 à 200'000 à la retraite, grâce à l'effet des intérêts composés. Mais il n'est jamais trop tard : même à 50 ans, les avantages fiscaux annuels restent très significatifs.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" data-i18n="tp.q5">Le pilier 3a est-il imposé au moment du retrait ?</button>
+        <div class="faq-a" data-i18n="tp.a5">Oui, mais à un taux réduit. Le capital est imposé séparément du revenu, à un taux préférentiel (environ 1/5 du taux ordinaire). Cette imposition reste bien inférieure aux économies fiscales cumulées pendant les années de cotisation.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="section-inner">
+    <div class="cta-banner reveal">
+      <h2 data-i18n="tp.cta.title">Prêt à optimiser votre prévoyance ?</h2>
+      <p data-i18n="tp.cta.desc">Chaque situation est unique. Nos conseillers analysent votre profil et vous recommandent la solution 3ème pilier la plus adaptée à vos objectifs.</p>
+      <a href="contact.html" class="btn-white" data-i18n="tp.cta.btn">Demander un conseil gratuit</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo logo-alpha-office">
+          <img src="logo_crop.png" alt="Alpha Office" class="logo-icon footer-logo-img"/>
+          <span class="footer-brand-name">Alpha Office</span>
+        </div>
+        <p data-i18n="ft.desc">Cabinet de courtage en assurance indépendant basé à Genève, opérant dans toute la Suisse.</p>
+        <p style="margin-top:0.75rem;font-size:0.78rem;color:rgba(255,255,255,0.35)">FINMA n° F01541899 &nbsp;·&nbsp; CHE-259.118.800</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="ft.pages">Pages</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="troisieme-pilier.html" data-i18n="nav.tp">3ème pilier</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="ft.svc">Services</h4>
+        <ul>
+          <li><a href="services.html#conseils" data-i18n="fsv1">Conseils personnalisés</a></li>
+          <li><a href="services.html#polices" data-i18n="fsv2">Gestion des polices</a></li>
+          <li><a href="services.html#sinistres" data-i18n="fsv3">Gestion des sinistres</a></li>
+          <li><a href="services.html#entreprise" data-i18n="fsv4">Solutions entreprise</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="ft.cnt">Contact</h4>
+        <ul>
+          <li><a href="mailto:info@alphaoffice-gva.ch">info@alphaoffice-gva.ch</a></li>
+          <li><a href="#">71 av. Louis-Casaï, 1216 Cointrin GE</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="ft.copy">© 2025 Alpha Office Sàrl. Tous droits réservés.</span>
+      <div class="footer-legal">
+        <a href="mentions-legales.html" data-i18n="ft.leg">Mentions légales</a>
+        <a href="confidentialite.html" data-i18n="ft.prv">Politique de confidentialité</a>
+      </div>
+    </div>
+    <div class="footer-credit">
+      <span data-i18n="ft.credit">Créé par</span> <a href="https://romand-web.com" target="_blank" rel="noopener">Romand-web.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+<a href="https://wa.me/41799190918" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+</body>
+</html>

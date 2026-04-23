@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 140" fill="none">
+  <!-- O double ring (gold, behind) -->
+  <circle cx="148" cy="70" r="54" stroke="#C4A86A" stroke-width="10"/>
+  <circle cx="148" cy="70" r="36" stroke="#C4A86A" stroke-width="7"/>
+  <!-- A left leg -->
+  <line x1="35" y1="112" x2="72" y2="28" stroke="#9B1C2E" stroke-width="10" stroke-linecap="round"/>
+  <!-- A right leg (goes through O) -->
+  <line x1="72" y1="28" x2="112" y2="112" stroke="#9B1C2E" stroke-width="10" stroke-linecap="round"/>
+  <!-- A crossbar (curved arc) -->
+  <path d="M50 80 Q72 58 94 80" stroke="#9B1C2E" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <!-- Overlap: right leg over O (re-draw in crimson on top) -->
+  <line x1="94" y1="92" x2="112" y2="112" stroke="#9B1C2E" stroke-width="10" stroke-linecap="round"/>
+</svg>
