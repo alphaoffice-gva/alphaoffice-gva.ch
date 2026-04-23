@@ -622,13 +622,78 @@ function initReveal() {
   const obs = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
   }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale').forEach(el => obs.observe(el));
+}
+
+// ─── Scroll progress bar ───
+function initScrollProgress() {
+  const bar = document.createElement('div');
+  bar.className = 'scroll-progress';
+  document.body.prepend(bar);
+  window.addEventListener('scroll', () => {
+    const h = document.documentElement;
+    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+    bar.style.width = pct + '%';
+  }, { passive: true });
+}
+
+// ─── Animated counters ───
+function initCounters() {
+  const els = document.querySelectorAll('.stat-num[data-target]');
+  if (!els.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      obs.unobserve(e.target);
+      const target = +e.target.dataset.target;
+      const suffix = e.target.dataset.suffix || '';
+      const duration = 1400;
+      const start = performance.now();
+      const update = (now) => {
+        const t = Math.min((now - start) / duration, 1);
+        const ease = 1 - Math.pow(1 - t, 3);
+        e.target.textContent = Math.round(ease * target) + suffix;
+        if (t < 1) requestAnimationFrame(update);
+      };
+      requestAnimationFrame(update);
+    });
+  }, { threshold: 0.4 });
+  els.forEach(el => obs.observe(el));
+}
+
+// ─── 3D card tilt ───
+function initCardTilt() {
+  const cards = document.querySelectorAll('.card, .review-card');
+  cards.forEach(card => {
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const x = ((e.clientX - r.left) / r.width  - 0.5) * 12;
+      const y = ((e.clientY - r.top)  / r.height - 0.5) * -12;
+      card.style.transform = `perspective(800px) rotateX(${y}deg) rotateY(${x}deg) translateY(-4px)`;
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+    });
+  });
+}
+
+// ─── Staggered grid children ───
+function initStagger() {
+  document.querySelectorAll('.cards-grid, .values-grid, .reviews-grid, .withdraw-grid').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => {
+      child.style.transitionDelay = (i * 80) + 'ms';
+    });
+  });
 }
 
 // ─── Init ───
 document.addEventListener('DOMContentLoaded', () => {
+  initScrollProgress();
   initNav();
   initReveal();
+  initCounters();
+  initCardTilt();
+  initStagger();
   applyLang(lang);
 
   // Lang picker toggle
