@@ -237,41 +237,22 @@ nav.scrolled {
 .form-group textarea { resize: vertical; min-height: 130px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 
-/* ─── File upload zone ─── */
-.file-drop-zone {
-  border: 2px dashed rgba(155,28,46,0.25); border-radius: 14px;
-  padding: 1.75rem 1.5rem; text-align: center; cursor: pointer;
-  transition: border-color 0.2s, background 0.2s; background: var(--light);
-  position: relative;
+/* ─── Document info box ─── */
+.doc-info-box {
+  display: flex; gap: 0.875rem; align-items: flex-start;
+  background: rgba(155,28,46,0.05); border: 1.5px solid rgba(155,28,46,0.15);
+  border-radius: 14px; padding: 1.1rem 1.25rem; margin-bottom: 1.5rem;
 }
-.file-drop-zone:hover, .file-drop-zone.drag-over {
-  border-color: var(--crimson); background: rgba(155,28,46,0.04);
+.doc-info-link {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.82rem; font-weight: 600; color: var(--crimson);
+  background: white; border: 1.5px solid rgba(155,28,46,0.2);
+  border-radius: 50px; padding: 5px 14px;
+  transition: background 0.2s, border-color 0.2s;
 }
-.file-drop-zone input[type="file"] {
-  position: absolute; inset: 0; width: 100%; height: 100%;
-  opacity: 0; cursor: pointer; border: none; padding: 0;
-}
-.file-drop-icon { font-size: 2rem; margin-bottom: 0.5rem; opacity: 0.6; }
-.file-drop-btn {
-  display: inline-block; background: var(--crimson); color: white;
-  padding: 7px 18px; border-radius: 50px; font-size: 0.82rem;
-  font-weight: 600; margin-bottom: 0.4rem; pointer-events: none;
-}
-.file-drop-or { font-size: 0.82rem; color: var(--gray); margin-bottom: 0.4rem; }
-.file-drop-hint { font-size: 0.75rem; color: rgba(0,0,0,0.35); }
-.file-list { margin-top: 0.875rem; display: flex; flex-direction: column; gap: 0.4rem; }
-.file-item {
-  display: flex; align-items: center; gap: 0.5rem; background: white;
-  border-radius: 8px; padding: 6px 10px; font-size: 0.8rem; color: var(--dark);
-  border: 1px solid rgba(0,0,0,0.08);
-}
-.file-item svg { flex-shrink: 0; color: var(--crimson); }
-.file-remove {
-  margin-left: auto; cursor: pointer; color: var(--gray);
-  background: none; border: none; font-size: 1rem; line-height: 1;
-  padding: 0 2px; transition: color 0.15s;
-}
-.file-remove:hover { color: var(--crimson); }
+.doc-info-link:hover { background: var(--crimson); color: white; border-color: var(--crimson); }
+.doc-info-link:hover svg { stroke: white; }
+.doc-info-link svg { flex-shrink: 0; }
 .btn-submit { width: 100%; background: var(--crimson); color: white; border: none; padding: 14px; border-radius: 12px; font-family: var(--font); font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s var(--ease); }
 .btn-submit:hover { background: var(--crimson-dark); transform: translateY(-1px); }
 .contact-info { padding-top: 0.5rem; }
