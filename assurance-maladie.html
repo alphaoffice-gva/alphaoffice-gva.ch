@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assurance maladie en Suisse | LAMal et complémentaires | Alpha Office Genève</title>
+  <meta name="description" content="Tout comprendre sur la LAMal et les assurances complémentaires en Suisse : franchise, prime, couvertures et conseils personnalisés par Alpha Office Sàrl à Genève."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://alphaoffice-gva.ch/assurance-maladie.html"/>
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png"/>
+  <meta property="og:image" content="https://alphaoffice-gva.ch/og-image.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="twitter:card" content="summary_large_image"/>
+  <meta property="twitter:image" content="https://alphaoffice-gva.ch/og-image.jpg"/>
+  <link rel="manifest" href="manifest.json"/>
+  <meta name="theme-color" content="#9B1C2E"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="apple-mobile-web-app-title" content="Alpha Office"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* ── Compare grid (LAMal vs Complémentaires) ── */
+    .compare-grid { display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin:3rem 0; }
+    .compare-card { border-radius:20px; padding:2.5rem 2rem; border:2px solid transparent; }
+    .compare-card.card-lamal { background:linear-gradient(135deg,rgba(155,28,46,.05),rgba(155,28,46,.02)); border-color:rgba(155,28,46,.15); }
+    .compare-card.card-comp  { background:linear-gradient(135deg,rgba(196,168,106,.08),rgba(196,168,106,.03)); border-color:rgba(196,168,106,.25); }
+    .compare-card h3 { font-size:1.5rem; margin-bottom:.4rem; }
+    .card-lamal h3 { color:var(--crimson); }
+    .card-comp  h3 { color:#8B6914; }
+    .compare-card .subtitle { font-size:.85rem; color:var(--gray); margin-bottom:1.5rem; }
+    .feature-list { list-style:none; display:flex; flex-direction:column; gap:.75rem; }
+    .feature-list li { display:flex; align-items:flex-start; gap:.75rem; font-size:.92rem; color:var(--medium); line-height:1.5; }
+    .feature-list li::before { content:'✓'; font-weight:700; font-size:.8rem; flex-shrink:0; width:20px; height:20px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-top:1px; }
+    .card-lamal .feature-list li::before { background:rgba(155,28,46,.1); color:var(--crimson); }
+    .card-comp  .feature-list li::before { background:rgba(196,168,106,.2); color:#8B6914; }
+
+    /* ── Complementary types grid (4 cards) ── */
+    .comp-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem; margin:2.5rem 0; }
+    .comp-card { background:var(--light); border-radius:18px; padding:1.75rem 1.5rem; }
+    .comp-icon { font-size:1.75rem; margin-bottom:.9rem; }
+    .comp-card h4 { font-size:1rem; margin-bottom:.5rem; color:var(--dark); }
+    .comp-card p  { font-size:.88rem; line-height:1.55; }
+
+    /* ── Stats banner ── */
+    .tax-banner { background:linear-gradient(135deg,var(--crimson),var(--crimson-dark)); border-radius:24px; padding:3rem; color:white; display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; margin:3rem 0; text-align:center; }
+    .tax-stat strong { display:block; font-size:clamp(1.8rem,4vw,2.8rem); font-weight:800; letter-spacing:-.03em; color:var(--gold); }
+    .tax-stat span { font-size:.88rem; color:rgba(255,255,255,.75); line-height:1.4; }
+
+    /* ── Tips box ── */
+    .tip-box { background:var(--light); border-radius:20px; padding:2.5rem; margin-top:2rem; }
+    .tip-box h3 { font-size:1.1rem; margin-bottom:1.5rem; }
+    .tip-list { display:flex; flex-direction:column; gap:.75rem; list-style:none; }
+    .tip-list li { display:flex; gap:.75rem; font-size:.92rem; color:var(--medium); line-height:1.5; }
+    .tip-list li::before { content:'→'; color:var(--crimson); font-weight:700; flex-shrink:0; }
+
+    /* ── Profile grid ── */
+    .profile-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin:2.5rem 0; }
+    .profile-card { background:var(--light); border-radius:18px; padding:2rem 1.5rem; }
+    .profile-icon { font-size:2rem; margin-bottom:1rem; }
+    .profile-card h4 { font-size:1rem; margin-bottom:.6rem; color:var(--dark); }
+    .profile-card p  { font-size:.88rem; line-height:1.55; }
+
+    /* ── FAQ ── */
+    .faq-list { display:flex; flex-direction:column; gap:1rem; margin:2.5rem 0; }
+    .faq-item { background:var(--light); border-radius:14px; overflow:hidden; }
+    .faq-q { width:100%; background:none; border:none; padding:1.25rem 1.5rem; text-align:left; font-size:1rem; font-weight:600; color:var(--dark); cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-family:var(--font); }
+    .faq-q::after { content:'+'; font-size:1.3rem; font-weight:300; color:var(--crimson); flex-shrink:0; transition:transform .3s; }
+    .faq-item.open .faq-q::after { transform:rotate(45deg); }
+    .faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease,padding .35s ease; padding:0 1.5rem; font-size:.92rem; color:var(--gray); line-height:1.7; }
+    .faq-item.open .faq-a { max-height:300px; padding:0 1.5rem 1.25rem; }
+
+    /* ── Misc ── */
+    .section-head { margin-bottom:2.5rem; }
+    .section-head .eyebrow { margin-bottom:.75rem; }
+    .section-head h2 { margin-bottom:.75rem; }
+    .section-head p { max-width:680px; }
+    .info-banner { background:var(--light); border-radius:16px; padding:1.5rem 2rem; display:flex; align-items:center; gap:1.2rem; }
+    .info-banner svg { flex-shrink:0; }
+    .info-banner p { margin:0; font-size:.92rem; }
+
+    /* ── Responsive ── */
+    @media(max-width:900px) { .comp-grid { grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:768px) {
+      .compare-grid { grid-template-columns:1fr; }
+      .tax-banner { grid-template-columns:1fr; gap:1.5rem; padding:2rem 1.5rem; }
+      .profile-grid { grid-template-columns:1fr 1fr; }
+      .tip-box { padding:1.75rem 1.25rem; }
+      .info-banner { flex-direction:column; align-items:flex-start; gap:.75rem; padding:1.25rem; }
+    }
+    @media(max-width:480px) {
+      .comp-grid { grid-template-columns:1fr; }
+      .profile-grid { grid-template-columns:1fr; }
+      .compare-card { padding:1.75rem 1.25rem; }
+      .tax-banner { padding:1.75rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo logo-alpha-office">
+    <img src="logo_crop.png" alt="Alpha Office" class="logo-icon"/>
+    <span class="logo-text">Alpha Office</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-page="index.html" data-i18n="nav.home">Accueil</a></li>
+    <li><a href="services.html" data-page="services.html" data-i18n="nav.services">Services</a></li>
+    <li><a href="assurance-maladie.html" data-page="assurance-maladie.html" class="active" data-i18n="nav.am">Assurance maladie</a></li>
+    <li><a href="troisieme-pilier.html" data-page="troisieme-pilier.html" data-i18n="nav.tp">3ème pilier</a></li>
+    <li><a href="contact.html" data-page="contact.html" data-i18n="nav.contact">Contact</a></li>
+    <li><a href="contact.html" class="nav-cta" data-i18n="nav.cta">Prendre rendez-vous</a></li>
+  </ul>
+  <div class="lang-picker">
+    <button class="lang-btn" aria-haspopup="listbox" aria-expanded="false">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <span class="lang-current">FR</span>
+      <svg class="lang-chevron" width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0l5 6 5-6z"/></svg>
+    </button>
+    <ul class="lang-dropdown" role="listbox">
+      <li data-lang="fr">Français</li>
+      <li data-lang="de">Deutsch</li>
+      <li data-lang="en">English</li>
+      <li data-lang="it">Italiano</li>
+      <li data-lang="sq">Shqip</li>
+      <li data-lang="hr">Bosanski</li>
+    </ul>
+  </div>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<header class="page-hero">
+  <span class="eyebrow anim-1" data-i18n="am.eyebrow">Assurance maladie</span>
+  <h1 class="anim-2" data-i18n="am.title">LAMal et complémentaires expliquées</h1>
+  <p class="anim-3" data-i18n="am.sub">Comprenez le système d'assurance maladie suisse, vos obligations légales et comment optimiser votre couverture.</p>
+</header>
+
+<!-- SECTION 1 : LAMal vs Complémentaires -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="am.s1.eyebrow">L'assurance de base</span>
+      <h2 data-i18n="am.s1.title">La LAMal : obligatoire pour tous</h2>
+      <p data-i18n="am.s1.desc">En Suisse, toute personne résidant sur le territoire doit s'affilier à un assureur-maladie reconnu. La LAMal garantit un accès égal aux soins de base pour tous.</p>
+    </div>
+
+    <div class="compare-grid reveal">
+      <div class="compare-card card-lamal">
+        <h3 data-i18n="am.lamal.title">LAMal – Assurance de base</h3>
+        <p class="subtitle" data-i18n="am.lamal.tag">Obligatoire</p>
+        <ul class="feature-list">
+          <li data-i18n="am.lamal.f1">Médecin généraliste et spécialistes</li>
+          <li data-i18n="am.lamal.f2">Hospitalisation en division commune</li>
+          <li data-i18n="am.lamal.f3">Médicaments de la liste officielle</li>
+          <li data-i18n="am.lamal.f4">Maternité, urgences, prévention</li>
+        </ul>
+      </div>
+      <div class="compare-card card-comp">
+        <h3 data-i18n="am.comp.title">Assurances complémentaires</h3>
+        <p class="subtitle" data-i18n="am.comp.tag">Facultative</p>
+        <ul class="feature-list">
+          <li data-i18n="am.comp.f1">Chambre privée ou semi-privée à l'hôpital</li>
+          <li data-i18n="am.comp.f2">Médecines alternatives et lunettes</li>
+          <li data-i18n="am.comp.f3">Soins dentaires et orthodontie</li>
+          <li data-i18n="am.comp.f4">Couverture internationale étendue</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="info-banner reveal">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" fill="#9B1C2E" opacity="0.1"/><path d="M12 8v4m0 4h.01" stroke="#9B1C2E" stroke-width="2" stroke-linecap="round"/></svg>
+      <p data-i18n="am.info">La prime LAMal peut varier jusqu'à <strong>40 %</strong> selon l'assureur, la région et la franchise choisie. Un courtier indépendant compare toutes les offres pour vous.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 2 : Les 4 types de complémentaires -->
+<section class="section" style="background:var(--light)">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="am.s2.eyebrow">Au-delà du minimum</span>
+      <h2 data-i18n="am.s2.title">Les assurances complémentaires</h2>
+      <p data-i18n="am.s2.desc">Les complémentaires étendent votre couverture selon votre mode de vie et vos besoins. Facultatives mais souvent très avantageuses.</p>
+    </div>
+    <div class="comp-grid">
+      <div class="comp-card reveal">
+        <div class="comp-icon">🏥</div>
+        <h4 data-i18n="am.c1.t">Hospitalisation</h4>
+        <p data-i18n="am.c1.d">Chambre privée ou semi-privée, libre choix du médecin dans toute la Suisse, couverture à l'étranger.</p>
+      </div>
+      <div class="comp-card reveal reveal-d2">
+        <div class="comp-icon">💊</div>
+        <h4 data-i18n="am.c2.t">Ambulatoire</h4>
+        <p data-i18n="am.c2.d">Ostéopathie, chiropractie, acupuncture, lunettes, bilans de santé et médecines alternatives.</p>
+      </div>
+      <div class="comp-card reveal reveal-d3">
+        <div class="comp-icon">🦷</div>
+        <h4 data-i18n="am.c3.t">Dentaire</h4>
+        <p data-i18n="am.c3.d">Soins dentaires courants, orthodontie, prothèses — non couverts par la LAMal.</p>
+      </div>
+      <div class="comp-card reveal reveal-d4">
+        <div class="comp-icon">🌍</div>
+        <h4 data-i18n="am.c4.t">International</h4>
+        <p data-i18n="am.c4.d">Soins à l'étranger, rapatriement médical, assistance voyage — idéal pour expatriés et grands voyageurs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3 : Franchise & prime -->
+<section class="section">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="am.s3.eyebrow">Optimiser votre couverture</span>
+      <h2 data-i18n="am.s3.title">Franchise et prime : faire le bon choix</h2>
+      <p data-i18n="am.s3.desc">La franchise est le montant annuel à votre charge avant que l'assurance intervienne. Plus elle est élevée, plus votre prime mensuelle est basse.</p>
+    </div>
+
+    <div class="tax-banner reveal">
+      <div class="tax-stat">
+        <strong>CHF 300–2'500</strong>
+        <span data-i18n="am.stat1">Fourchette de franchise annuelle</span>
+      </div>
+      <div class="tax-stat">
+        <strong>~40 %</strong>
+        <span data-i18n="am.stat2">Réduction de prime possible avec franchise maximale</span>
+      </div>
+      <div class="tax-stat">
+        <strong>26</strong>
+        <span data-i18n="am.stat3">Assureurs en concurrence pour votre LAMal</span>
+      </div>
+    </div>
+
+    <div class="tip-box reveal">
+      <h3 data-i18n="am.tip.title">Règle générale</h3>
+      <ul class="tip-list">
+        <li data-i18n="am.tip.d1">Franchise élevée (CHF 2'500) si vous êtes en bonne santé et consultez peu.</li>
+        <li data-i18n="am.tip.d2">Franchise basse (CHF 300) si vous avez des frais médicaux réguliers.</li>
+        <li data-i18n="am.tip.d3">Le modèle (médecin de famille, HMO, télémédecine) peut aussi réduire votre prime de 10–20 %.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 : Pour qui -->
+<section class="section" style="background:var(--light)">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="am.s4.eyebrow">Profils</span>
+      <h2 data-i18n="am.s4.title">Quelle couverture pour qui ?</h2>
+    </div>
+    <div class="profile-grid">
+      <div class="profile-card reveal">
+        <div class="profile-icon">👨‍👩‍👧‍👦</div>
+        <h4 data-i18n="am.pr1.t">Familles</h4>
+        <p data-i18n="am.pr1.d">Les enfants sont assurés gratuitement jusqu'à 18 ans pour la LAMal de base. Pensez aux complémentaires dentaires et pédiatriques pour une protection complète.</p>
+      </div>
+      <div class="profile-card reveal reveal-d2">
+        <div class="profile-icon">🏃</div>
+        <h4 data-i18n="am.pr2.t">Personnes en bonne santé</h4>
+        <p data-i18n="am.pr2.d">Une franchise élevée et un modèle alternatif (HMO ou télémédecine) permettent de réduire significativement la prime tout en gardant une couverture solide.</p>
+      </div>
+      <div class="profile-card reveal reveal-d3">
+        <div class="profile-icon">🩺</div>
+        <h4 data-i18n="am.pr3.t">Besoins médicaux réguliers</h4>
+        <p data-i18n="am.pr3.d">Une franchise basse et des complémentaires ambulatoires bien choisies vous protègent efficacement sans mauvaises surprises en fin d'année.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5 : FAQ -->
+<section class="section">
+  <div class="section-inner" style="max-width:800px;margin:0 auto">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="am.faq.eyebrow">Questions fréquentes</span>
+      <h2 data-i18n="am.faq.title">Ce que nos clients demandent</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" data-i18n="am.q1">Puis-je changer d'assureur LAMal chaque année ?</button>
+        <div class="faq-a" data-i18n="am.a1">Oui. Vous pouvez changer d'assureur-maladie pour le 1er janvier en envoyant votre résiliation avant le 30 novembre. Alpha Office compare les offres du marché et effectue le changement à votre place.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" data-i18n="am.q2">Quelle est la différence entre LAMal et complémentaire ?</button>
+        <div class="faq-a" data-i18n="am.a2">La LAMal est obligatoire et couvre les soins de base définis par la loi. Les assurances complémentaires sont facultatives et complètent la couverture de base : chambre privée, médecines alternatives, dentaire, etc.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" data-i18n="am.q3">Les primes LAMal sont-elles déductibles des impôts ?</button>
+        <div class="faq-a" data-i18n="am.a3">Vous pouvez déduire un montant forfaitaire pour les primes de caisse maladie. Ce montant dépend de votre canton et de votre situation familiale — ce n'est pas une déduction directe des primes versées.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" data-i18n="am.q4">Mon enfant doit-il aussi être assuré LAMal ?</button>
+        <div class="faq-a" data-i18n="am.a4">Oui, chaque enfant résidant en Suisse doit être assuré LAMal dès sa naissance. Les subventions cantonales réduisent souvent la prime à zéro ou quasi-zéro pour les familles à revenus modestes.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" data-i18n="am.q5">Comment réduire ma prime LAMal sans perdre de couverture ?</button>
+        <div class="faq-a" data-i18n="am.a5">Plusieurs leviers : augmenter la franchise, choisir un modèle alternatif (médecin de famille, HMO, télémédecine), comparer les assureurs chaque automne. Alpha Office fait cette analyse gratuitement.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="section-inner">
+    <div class="cta-banner reveal">
+      <h2 data-i18n="am.cta.title">Optimisez votre couverture maladie</h2>
+      <p data-i18n="am.cta.desc">Alpha Office compare les offres LAMal et complémentaires pour vous trouver la meilleure couverture au meilleur prix.</p>
+      <a href="contact.html" class="btn-white" data-i18n="am.cta.btn">Demander un bilan gratuit</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo logo-alpha-office">
+          <img src="logo_crop.png" alt="Alpha Office" class="logo-icon footer-logo-img"/>
+          <span class="footer-brand-name">Alpha Office</span>
+        </div>
+        <p data-i18n="ft.desc">Cabinet de courtage en assurance indépendant basé à Genève, opérant dans toute la Suisse.</p>
+        <p style="margin-top:.75rem;font-size:.78rem;color:rgba(255,255,255,.35)">FINMA n° F01541899 &nbsp;·&nbsp; CHE-259.118.800</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="ft.pages">Pages</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="assurance-maladie.html" data-i18n="nav.am">Assurance maladie</a></li>
+          <li><a href="troisieme-pilier.html" data-i18n="nav.tp">3ème pilier</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="ft.svc">Services</h4>
+        <ul>
+          <li><a href="services.html#conseils" data-i18n="fsv1">Conseils personnalisés</a></li>
+          <li><a href="services.html#polices" data-i18n="fsv2">Gestion des polices</a></li>
+          <li><a href="services.html#sinistres" data-i18n="fsv3">Gestion des sinistres</a></li>
+          <li><a href="services.html#entreprise" data-i18n="fsv4">Solutions entreprise</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="ft.cnt">Contact</h4>
+        <ul>
+          <li><a href="mailto:info@alphaoffice-gva.ch">info@alphaoffice-gva.ch</a></li>
+          <li><a href="#">71 av. Louis-Casaï, 1216 Cointrin GE</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="ft.copy">© 2025 Alpha Office Sàrl. Tous droits réservés.</span>
+      <div class="footer-legal">
+        <a href="mentions-legales.html" data-i18n="ft.leg">Mentions légales</a>
+        <a href="confidentialite.html" data-i18n="ft.prv">Politique de confidentialité</a>
+      </div>
+    </div>
+    <div class="footer-credit">
+      <span data-i18n="ft.credit">Créé par</span> <a href="https://romand-web.com" target="_blank" rel="noopener">Romand-web.com</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+<a href="https://wa.me/41799190918" class="wa-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+</body>
+</html>
