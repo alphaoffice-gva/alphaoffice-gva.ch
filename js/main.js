@@ -930,17 +930,27 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', e => {
       e.stopPropagation();
       const isOpen = picker.classList.contains('open');
-      document.querySelectorAll('.lang-picker.open').forEach(p => p.classList.remove('open'));
-      if (!isOpen) picker.classList.add('open');
+      document.querySelectorAll('.lang-picker.open').forEach(p => {
+        p.classList.remove('open');
+        p.querySelector('.lang-btn').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        picker.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
     });
     dropdown.querySelectorAll('li').forEach(li => {
       li.addEventListener('click', () => {
         applyLang(li.dataset.lang);
         picker.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
       });
     });
   });
   document.addEventListener('click', () => {
-    document.querySelectorAll('.lang-picker.open').forEach(p => p.classList.remove('open'));
+    document.querySelectorAll('.lang-picker.open').forEach(p => {
+      p.classList.remove('open');
+      p.querySelector('.lang-btn').setAttribute('aria-expanded', 'false');
+    });
   });
 });
