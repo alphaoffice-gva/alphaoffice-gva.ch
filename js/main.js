@@ -766,18 +766,29 @@ function initNav() {
     nav.classList.toggle('scrolled', window.scrollY > 20);
   }, { passive: true });
 
-  if (toggle) toggle.addEventListener('click', () => {
+  function closeNav() {
+    links.classList.remove('open');
+    if (toggle) { toggle.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); }
+  }
+
+  if (toggle) toggle.addEventListener('click', e => {
+    e.stopPropagation();
     const isOpen = links.classList.toggle('open');
     toggle.classList.toggle('open');
     toggle.setAttribute('aria-expanded', isOpen);
-    // Close lang picker when nav opens
-    document.querySelectorAll('.lang-picker.open').forEach(p => p.classList.remove('open'));
+    document.querySelectorAll('.lang-picker.open').forEach(p => {
+      p.classList.remove('open');
+      p.querySelector('.lang-btn').setAttribute('aria-expanded', 'false');
+    });
   });
-  // Close menu when a link is clicked
-  if (links) links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    links.classList.remove('open');
-    if (toggle) toggle.classList.remove('open');
-  }));
+
+  // Close on outside tap / click
+  document.addEventListener('click', e => {
+    if (links.classList.contains('open') && !nav.contains(e.target)) closeNav();
+  });
+
+  // Close menu when a nav link is clicked
+  if (links) links.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
 
   // Active link
   const page = location.pathname.split('/').pop() || 'index.html';
