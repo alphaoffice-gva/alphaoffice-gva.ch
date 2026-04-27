@@ -295,17 +295,7 @@
     <p data-i18n="part.desc">En tant que courtier indépendant, nous collaborons avec les principaux acteurs du marché suisse.</p>
   </div>
   <div class="marquee-wrapper">
-    <div class="marquee-track">
-      <!-- Set 1 -->
-      <div class="partner-chip"><img src="AXA LOGO.png" alt="AXA" width="1581" height="1581" loading="lazy"/></div>
-      <div class="partner-chip"><img src="Zurich Logo.svg.png" alt="Zurich" width="1280" height="303" loading="lazy"/></div>
-      <div class="partner-chip"><img src="AZ_Logo_positive_RGB.png" alt="Allianz" width="1666" height="413" loading="lazy"/></div>
-      <div class="partner-chip"><img src="G.MI_BIG-47ef53dd.png" alt="Generali" width="1593" height="1289" loading="lazy"/></div>
-      <div class="partner-chip"><img src="Logo_Helsana.svg.png" alt="Helsana" width="3840" height="772" loading="lazy"/></div>
-      <div class="partner-chip"><img src="Css-versicherung-logo.svg.png" alt="CSS" width="960" height="410" loading="lazy"/></div>
-      <div class="partner-chip"><img src="Assura_Logo.svg.png" alt="Assura" width="3840" height="589" loading="lazy"/></div>
-      <div class="partner-chip"><img src="gm_logo_ver_rvb_bicol.png" alt="Groupe Mutuel" width="1000" height="476" loading="lazy"/></div>
-      <!-- Set 2 (duplicate for seamless loop) -->
+    <div class="marquee-track" id="marquee-track">
       <div class="partner-chip"><img src="AXA LOGO.png" alt="AXA" width="1581" height="1581" loading="lazy"/></div>
       <div class="partner-chip"><img src="Zurich Logo.svg.png" alt="Zurich" width="1280" height="303" loading="lazy"/></div>
       <div class="partner-chip"><img src="AZ_Logo_positive_RGB.png" alt="Allianz" width="1666" height="413" loading="lazy"/></div>
@@ -316,6 +306,17 @@
       <div class="partner-chip"><img src="gm_logo_ver_rvb_bicol.png" alt="Groupe Mutuel" width="1000" height="476" loading="lazy"/></div>
     </div>
   </div>
+  <script>
+    (function(){
+      var t=document.getElementById('marquee-track');
+      if(!t)return;
+      Array.from(t.children).forEach(function(c){
+        var cl=c.cloneNode(true);
+        cl.setAttribute('aria-hidden','true');
+        t.appendChild(cl);
+      });
+    })();
+  </script>
 </section>
 
 <!-- FOOTER -->
