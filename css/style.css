@@ -123,10 +123,13 @@ nav.scrolled {
 }
 @keyframes bgPulse { from { transform: scale(1); } to { transform: scale(1.06) translate(2%, 2%); } }
 .hero-content { position: relative; z-index: 1; max-width: 860px; }
-/* LCP: hero text visible immediately, transform-only animation (no opacity delay) */
-.hero-content .anim-1 { opacity:1; animation: slideUp 0.7s var(--ease) 0s both; }
-.hero-content .anim-2 { opacity:1; animation: slideUp 0.7s var(--ease) 0.12s both; }
-.hero-content .anim-3 { opacity:1; animation: slideUp 0.7s var(--ease) 0.24s both; }
+/* LCP: hero/page-hero text visible immediately, transform-only animation (no opacity delay) */
+.hero-content .anim-1,
+.page-hero .anim-1 { opacity:1; animation: slideUp 0.7s var(--ease) 0s both; }
+.hero-content .anim-2,
+.page-hero .anim-2 { opacity:1; animation: slideUp 0.7s var(--ease) 0.12s both; }
+.hero-content .anim-3,
+.page-hero .anim-3 { opacity:1; animation: slideUp 0.7s var(--ease) 0.24s both; }
 .eyebrow { display: inline-block; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; }
 .hero h1 { color: var(--dark); margin-bottom: 1.5rem; }
 .hero h1 em { color: var(--crimson); font-style: normal; }
