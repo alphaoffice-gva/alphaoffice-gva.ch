@@ -886,6 +886,29 @@ function initCookieBanner() {
   document.getElementById('ck-decline').addEventListener('click', () => dismiss('declined'));
 }
 
+// ─── FAQ accordion ───
+function initFaq() {
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+}
+
+// ─── Marquee clone ───
+function initMarquee() {
+  const t = document.getElementById('marquee-track');
+  if (!t) return;
+  Array.from(t.children).forEach(c => {
+    const cl = c.cloneNode(true);
+    cl.setAttribute('aria-hidden', 'true');
+    t.appendChild(cl);
+  });
+}
+
 // ─── Init ───
 document.addEventListener('DOMContentLoaded', () => {
   initScrollProgress();
@@ -894,6 +917,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initCardTilt();
   initStagger();
+  initFaq();
+  initMarquee();
   initCookieBanner();
   applyLang(lang);
 
