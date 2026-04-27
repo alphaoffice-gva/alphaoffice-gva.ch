@@ -648,3 +648,38 @@ body { animation: pageIn 0.4s ease forwards; }
   .footer-credit { font-size: 0.7rem; }
   .lang-btn { gap: 4px; }
 }
+
+/* ─── Cookie Banner ─── */
+#cookie-banner {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(120%);
+  z-index: 9999; width: min(560px, calc(100% - 32px));
+  background: var(--dark); color: var(--white);
+  border-radius: 16px; padding: 20px 24px;
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.28);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+#cookie-banner.visible { transform: translateX(-50%) translateY(0); }
+#cookie-banner p { font-size: 0.85rem; color: rgba(255,255,255,0.82); line-height: 1.5; flex: 1; min-width: 200px; margin: 0; }
+#cookie-banner p a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
+.ck-btns { display: flex; gap: 8px; flex-shrink: 0; }
+#ck-accept {
+  background: var(--crimson); color: white; border: none;
+  padding: 9px 18px; border-radius: 50px; font-size: 0.82rem;
+  font-weight: 700; cursor: pointer; font-family: var(--font);
+  transition: background 0.2s;
+}
+#ck-accept:hover { background: var(--crimson-dark); }
+#ck-decline {
+  background: transparent; color: rgba(255,255,255,0.6);
+  border: 1.5px solid rgba(255,255,255,0.2);
+  padding: 9px 18px; border-radius: 50px; font-size: 0.82rem;
+  font-weight: 600; cursor: pointer; font-family: var(--font);
+  transition: border-color 0.2s, color 0.2s;
+}
+#ck-decline:hover { border-color: rgba(255,255,255,0.5); color: white; }
+@media (max-width: 480px) {
+  #cookie-banner { flex-direction: column; align-items: stretch; bottom: 16px; padding: 16px 18px; }
+  .ck-btns { width: 100%; }
+  #ck-accept, #ck-decline { flex: 1; text-align: center; }
+}

@@ -100,6 +100,8 @@ const T = {
     "tp.q4":"À partir de quel âge est-il utile de commencer ?","tp.a4":"Le plus tôt est le mieux. Commencer à 25 ans plutôt qu'à 40 ans peut représenter une différence de CHF 100'000 à 200'000 à la retraite. Mais il n'est jamais trop tard : même à 50 ans, les avantages fiscaux annuels restent très significatifs.",
     "tp.q5":"Le pilier 3a est-il imposé au moment du retrait ?","tp.a5":"Oui, mais à un taux réduit. Le capital est imposé séparément du revenu, à un taux préférentiel (environ 1/5 du taux ordinaire). Cette imposition reste bien inférieure aux économies fiscales cumulées pendant les années de cotisation.",
     "tp.cta.title":"Prêt à optimiser votre prévoyance ?","tp.cta.desc":"Chaque situation est unique. Nos conseillers analysent votre profil et vous recommandent la solution 3ème pilier la plus adaptée à vos objectifs.","tp.cta.btn":"Demander un conseil gratuit",
+    "ck.text":"Nous utilisons des cookies pour améliorer votre expérience et analyser notre trafic, conformément à la <a href=\"confidentialite.html\">nLPD</a>.",
+    "ck.accept":"Accepter","ck.decline":"Refuser",
   },
   de: {
     "nav.home":"Startseite","nav.services":"Dienstleistungen","nav.luljeta":"Luljeta Selimi","nav.contact":"Kontakt","nav.cta":"Termin vereinbaren","nav.tp":"3. Säule",
@@ -201,6 +203,8 @@ const T = {
     "tp.q4":"Ab welchem Alter lohnt es sich anzufangen?","tp.a4":"Je früher, desto besser. Mit 25 statt mit 40 anzufangen kann dank Zinseszins CHF 100'000 bis 200'000 mehr bei der Rente bedeuten. Aber es ist nie zu spät: Selbst mit 50 sind die jährlichen Steuervorteile sehr bedeutsam.",
     "tp.q5":"Wird die Säule 3a bei der Auszahlung besteuert?","tp.a5":"Ja, aber zu einem reduzierten Satz. Das Kapital wird separat vom Einkommen zu einem Vorzugssatz besteuert (ca. 1/5 des ordentlichen Satzes). Diese Besteuerung bleibt weit unter den kumulierten Steuerersparnissen der Einzahlungsjahre.",
     "tp.cta.title":"Bereit, Ihre Vorsorge zu optimieren?","tp.cta.desc":"Jede Situation ist einzigartig. Unsere Berater analysieren Ihr Profil und empfehlen Ihnen die am besten geeignete 3. Säule Lösung.","tp.cta.btn":"Kostenlose Beratung anfragen",
+    "ck.text":"Wir verwenden Cookies zur Verbesserung Ihres Erlebnisses und zur Analyse unseres Traffics, gemäss <a href=\"confidentialite.html\">DSG</a>.",
+    "ck.accept":"Akzeptieren","ck.decline":"Ablehnen",
   },
   en: {
     "nav.home":"Home","nav.services":"Services","nav.contact":"Contact","nav.cta":"Book appointment","nav.tp":"3rd pillar",
@@ -289,6 +293,8 @@ const T = {
     "tp.q4":"From what age is it useful to start?","tp.a4":"The earlier the better. Starting at 25 rather than 40 can make a difference of CHF 100,000 to 200,000 at retirement thanks to compound interest. But it's never too late: even at 50, the annual tax benefits remain very significant.",
     "tp.q5":"Is pillar 3a taxed at withdrawal?","tp.a5":"Yes, but at a reduced rate. The capital is taxed separately from income at a preferential rate (approximately 1/5 of the ordinary rate). This taxation remains far below the cumulative tax savings over the contribution years.",
     "tp.cta.title":"Ready to optimise your pension?","tp.cta.desc":"Every situation is unique. Our advisers analyse your profile and recommend the most suitable 3rd pillar solution for your goals.","tp.cta.btn":"Request a free consultation",
+    "ck.text":"We use cookies to improve your experience and analyse our traffic, in accordance with the <a href=\"confidentialite.html\">nFADP</a>.",
+    "ck.accept":"Accept","ck.decline":"Decline",
   },
   it: {
     "nav.home":"Inizio","nav.services":"Servizi","nav.contact":"Contatto","nav.cta":"Fissa appuntamento","nav.tp":"3° pilastro",
@@ -358,6 +364,8 @@ const T = {
     "tp.q4":"Da quale età è utile iniziare?","tp.a4":"Prima è meglio. Iniziare a 25 anni invece che a 40 può fare una differenza di CHF 100'000–200'000 alla pensione. Ma non è mai troppo tardi: anche a 50 anni i vantaggi fiscali annuali rimangono molto significativi.",
     "tp.q5":"Il pilastro 3a è tassato al momento del prelievo?","tp.a5":"Sì, ma a un'aliquota ridotta. Il capitale è tassato separatamente dal reddito a un'aliquota preferenziale (circa 1/5 dell'aliquota ordinaria). Questa tassazione rimane molto inferiore ai risparmi fiscali cumulati.",
     "tp.cta.title":"Pronti a ottimizzare la vostra previdenza?","tp.cta.desc":"Ogni situazione è unica. I nostri consulenti analizzano il vostro profilo e vi consigliano la soluzione 3° pilastro più adatta.","tp.cta.btn":"Richiedere una consulenza gratuita",
+    "ck.text":"Utilizziamo cookie per migliorare la vostra esperienza e analizzare il traffico, in conformità con la <a href=\"confidentialite.html\">LPD</a>.",
+    "ck.accept":"Accettare","ck.decline":"Rifiutare",
   },
   sq: {
     "nav.home":"Ballina","nav.services":"Shërbime","nav.contact":"Kontakt","nav.cta":"Rezervo takim","nav.tp":"Shtylla 3",
@@ -456,6 +464,8 @@ const T = {
     "tp.q4":"Nga cila moshë është e dobishme të fillosh?","tp.a4":"Sa më herët aq më mirë. Fillimi në moshën 25 vjeç në vend të 40 vjeç mund të bëjë ndryshim prej CHF 100'000-200'000 në pension. Por kurrë nuk është tepër vonë.",
     "tp.q5":"A tatohet shtylla 3a gjatë tërheqjes?","tp.a5":"Po, por me normë të reduktuar. Kapitali tatohet veçmas nga të ardhurat me një normë preferenciale (rreth 1/5 e normës ordinare). Ky tatim mbetet shumë më i ulët se kursimet tatimore të grumbulluara.",
     "tp.cta.title":"Gati të optimizoni pensionin tuaj?","tp.cta.desc":"Çdo situatë është unike. Këshilltarët tanë analizojnë profilin tuaj dhe rekomandojnë zgjidhjen e shtyllës 3-të më të përshtatshme.","tp.cta.btn":"Kërkoni këshillim falas",
+    "ck.text":"Përdorim cookie për të përmirësuar përvojën tuaj dhe për të analizuar trafikun tonë, në përputhje me <a href=\"confidentialite.html\">LPD</a>.",
+    "ck.accept":"Pranoj","ck.decline":"Refuzoj",
   },
   hr: {
     "nav.home":"Početna","nav.services":"Usluge","nav.contact":"Kontakt","nav.cta":"Zakaži termin","nav.tp":"3. stup",
@@ -554,6 +564,8 @@ const T = {
     "tp.q4":"Od koje dobi je korisno početi?","tp.a4":"Što ranije, to bolje. Početak s 25 umjesto s 40 godina može značiti razliku od CHF 100'000–200'000 pri odlasku u mirovinu. No nikad nije prekasno.",
     "tp.q5":"Oporezuje li se stup 3a pri isplati?","tp.a5":"Da, ali po smanjenoj stopi. Kapital se oporezuje odvojeno od prihoda po povlašteno stopi (oko 1/5 redovne stope). Taj porez ostaje daleko ispod kumuliranih poreznih uštedina.",
     "tp.cta.title":"Spremni optimizirati svoju mirovinu?","tp.cta.desc":"Svaka situacija je jedinstvena. Naši savjetnici analiziraju vaš profil i preporučuju najprikladnije rješenje 3. stupa.","tp.cta.btn":"Zatražite besplatni savjet",
+    "ck.text":"Koristimo kolačiće za poboljšanje vašeg iskustva i analizu prometa, sukladno <a href=\"confidentialite.html\">LPD</a>.",
+    "ck.accept":"Prihvatiti","ck.decline":"Odbiti",
   }
 };
 
@@ -692,6 +704,33 @@ function initStagger() {
   });
 }
 
+// ─── Cookie Banner ───
+function initCookieBanner() {
+  if (localStorage.getItem('ao-cookies')) return;
+
+  const banner = document.createElement('div');
+  banner.id = 'cookie-banner';
+  banner.setAttribute('role', 'dialog');
+  banner.setAttribute('aria-live', 'polite');
+  banner.innerHTML = `
+    <p data-i18n="ck.text"></p>
+    <div class="ck-btns">
+      <button id="ck-accept" data-i18n="ck.accept"></button>
+      <button id="ck-decline" data-i18n="ck.decline"></button>
+    </div>`;
+  document.body.appendChild(banner);
+
+  requestAnimationFrame(() => banner.classList.add('visible'));
+
+  function dismiss(choice) {
+    localStorage.setItem('ao-cookies', choice);
+    banner.classList.remove('visible');
+    banner.addEventListener('transitionend', () => banner.remove(), { once: true });
+  }
+  document.getElementById('ck-accept').addEventListener('click', () => dismiss('accepted'));
+  document.getElementById('ck-decline').addEventListener('click', () => dismiss('declined'));
+}
+
 // ─── Init ───
 document.addEventListener('DOMContentLoaded', () => {
   initScrollProgress();
@@ -700,6 +739,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initCardTilt();
   initStagger();
+  initCookieBanner();
   applyLang(lang);
 
   // Lang picker toggle
