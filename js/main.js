@@ -833,13 +833,18 @@ function initCounters() {
 function initCardTilt() {
   const cards = document.querySelectorAll('.card, .review-card');
   cards.forEach(card => {
+    let bounds = null;
+    card.addEventListener('mouseenter', () => {
+      bounds = card.getBoundingClientRect();
+    });
     card.addEventListener('mousemove', e => {
-      const r = card.getBoundingClientRect();
-      const x = ((e.clientX - r.left) / r.width  - 0.5) * 12;
-      const y = ((e.clientY - r.top)  / r.height - 0.5) * -12;
+      if (!bounds) return;
+      const x = ((e.clientX - bounds.left) / bounds.width  - 0.5) * 12;
+      const y = ((e.clientY - bounds.top)  / bounds.height - 0.5) * -12;
       card.style.transform = `perspective(800px) rotateX(${y}deg) rotateY(${x}deg) translateY(-4px)`;
     });
     card.addEventListener('mouseleave', () => {
+      bounds = null;
       card.style.transform = '';
     });
   });
