@@ -57,7 +57,7 @@
     .tip-list li::before { content:'→'; color:var(--crimson); font-weight:700; flex-shrink:0; }
 
     /* ── Profile grid ── */
-    .profile-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin:2.5rem 0; }
+    .profile-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.5rem; margin:2.5rem 0; }
     .profile-card { background:var(--light); border-radius:18px; padding:2rem 1.5rem; }
     .profile-icon { font-size:2rem; margin-bottom:1rem; }
     .profile-card h4 { font-size:1rem; margin-bottom:.6rem; color:var(--dark); }
@@ -86,7 +86,7 @@
     @media(max-width:768px) {
       .compare-grid { grid-template-columns:1fr; }
       .tax-banner { grid-template-columns:1fr; gap:1.5rem; padding:2rem 1.5rem; }
-      .profile-grid { grid-template-columns:1fr 1fr; }
+      .profile-grid { grid-template-columns:1fr; }
       .tip-box { padding:1.75rem 1.25rem; }
       .info-banner { flex-direction:column; align-items:flex-start; gap:.75rem; padding:1.25rem; }
     }
@@ -256,11 +256,6 @@
     </div>
     <div class="profile-grid">
       <div class="profile-card reveal">
-        <div class="profile-icon">👨‍👩‍👧‍👦</div>
-        <h4 data-i18n="am.pr1.t">Familles</h4>
-        <p data-i18n="am.pr1.d">Les enfants sont assurés gratuitement jusqu'à 18 ans pour la LAMal de base. Pensez aux complémentaires dentaires et pédiatriques pour une protection complète.</p>
-      </div>
-      <div class="profile-card reveal reveal-d2">
         <div class="profile-icon">🏃</div>
         <h4 data-i18n="am.pr2.t">Personnes en bonne santé</h4>
         <p data-i18n="am.pr2.d">Une franchise élevée et un modèle alternatif (HMO ou télémédecine) permettent de réduire significativement la prime tout en gardant une couverture solide.</p>
