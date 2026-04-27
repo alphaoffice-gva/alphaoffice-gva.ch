@@ -867,6 +867,7 @@ function initCookieBanner() {
   const banner = document.createElement('div');
   banner.id = 'cookie-banner';
   banner.setAttribute('role', 'dialog');
+  banner.setAttribute('aria-label', 'Gestion des cookies');
   banner.setAttribute('aria-live', 'polite');
   banner.innerHTML = `
     <p data-i18n="ck.text"></p>
