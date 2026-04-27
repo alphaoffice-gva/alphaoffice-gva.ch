@@ -1,3 +1,4 @@
+// @target ES2020 – no transpilation, no polyfills, modern browsers only
 // ─── Translations ───
 const T = {
   fr: {
