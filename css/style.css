@@ -17,7 +17,7 @@ html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); -webkit-text-s
 body { font-family: var(--font); color: var(--dark); background: var(--white); line-height: 1.6; overflow-x: hidden; overscroll-behavior-x: none; }
 img, svg { display: block; }
 a { text-decoration: none; }
-button, a, [role="button"] { touch-action: manipulation; }
+button, a, [role="button"], .lang-dropdown li { touch-action: manipulation; }
 
 /* ─── Typography ─── */
 h1 { font-size: clamp(2.6rem, 6vw, 5rem); font-weight: 700; letter-spacing: -0.025em; line-height: 1.05; }
