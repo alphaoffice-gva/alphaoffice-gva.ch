@@ -731,7 +731,7 @@ function applyLang(l) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     const val = T[l]?.[key] ?? T['fr'][key];
-    if (val !== undefined) el.innerHTML = val;
+    if (val !== undefined && el.innerHTML !== val) el.innerHTML = val;
   });
   document.querySelectorAll('[data-i18n-ph]').forEach(el => {
     const key = el.getAttribute('data-i18n-ph');
