@@ -119,9 +119,8 @@ nav.scrolled {
   position: absolute; inset: 0; z-index: 0;
   background: radial-gradient(ellipse 80% 60% at 60% 40%, rgba(155,28,46,0.04) 0%, transparent 65%),
               radial-gradient(ellipse 70% 50% at 30% 60%, rgba(196,168,106,0.05) 0%, transparent 65%);
-  animation: bgPulse 10s ease-in-out infinite alternate;
+  /* bgPulse removed — continuous transform animation was costing 4s+ of Style&Layout work */
 }
-@keyframes bgPulse { from { transform: scale(1); } to { transform: scale(1.06) translate(2%, 2%); } }
 .hero-content { position: relative; z-index: 1; max-width: 860px; }
 /* LCP: hero/page-hero text visible immediately, transform-only animation (no opacity delay) */
 .hero-content .anim-1,
@@ -161,8 +160,9 @@ nav.scrolled {
 .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.22); }
 
 /* ─── Sections ─── */
-.section { padding: 7rem 5%; }
-.section-inner { max-width: 1200px; margin: 0 auto; }
+.section { padding: 7rem 5%; contain: layout style; }
+.cv-auto { content-visibility: auto; contain-intrinsic-size: 0 600px; }
+.section-inner { max-width: 1200px; margin: 0 auto; contain: layout style; }
 .section-alt { background: var(--light); }
 .section-header { text-align: center; margin-bottom: 5rem; }
 .section-header .eyebrow { margin-bottom: 1rem; }
@@ -380,9 +380,8 @@ footer { background: var(--dark); color: rgba(255,255,255,0.55); padding: 4.5rem
   background: linear-gradient(90deg, var(--crimson), var(--gold), var(--crimson));
   background-size: 200% auto;
   z-index: 9999; pointer-events: none;
-  animation: progressShimmer 3s linear infinite;
+  /* shimmer animation removed — background-position loop was forcing continuous compositing */
 }
-@keyframes progressShimmer { to { background-position: 200% center; } }
 
 /* ─── Page entrance ─── */
 @keyframes pageIn { from { opacity: 0; } to { opacity: 1; } }
