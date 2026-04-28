@@ -810,10 +810,16 @@ function initScrollProgress() {
   const bar = document.createElement('div');
   bar.className = 'scroll-progress';
   document.body.prepend(bar);
+  const h = document.documentElement;
+  let maxScroll = h.scrollHeight - h.clientHeight;
+  let rafId = null;
+  window.addEventListener('resize', () => { maxScroll = h.scrollHeight - h.clientHeight; }, { passive: true });
   window.addEventListener('scroll', () => {
-    const h = document.documentElement;
-    const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
-    bar.style.width = pct + '%';
+    if (rafId) return;
+    rafId = requestAnimationFrame(() => {
+      bar.style.width = (h.scrollTop / maxScroll * 100) + '%';
+      rafId = null;
+    });
   }, { passive: true });
 }
 
